@@ -8,7 +8,7 @@ contracts:
 database:
   version: '1.0'
 content_brain:
-  version: 3B
+  version: 3C
 providers:
   llm:
     active: gemini
@@ -43,3 +43,5 @@ runtime:
   gemini_calls_per_research_subject: 1
   pubmed_query_generation: deterministic
   google_search_grounding: false
+content_package:
+  version: package_v1

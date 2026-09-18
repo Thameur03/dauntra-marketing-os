@@ -6,6 +6,11 @@ from contracts.content import (
     TikTokVideoContent,
     XContent,
 )
+from contracts.content_package import (
+    ContentItemEnvelope,
+    ContentPackage,
+    ContentPackageItem,
+)
 from contracts.publishing import PublicationRequest, PublicationResult
 from contracts.qa import QACheckResult
 from contracts.render import CarouselRenderRequest, VideoRenderRequest
@@ -13,6 +18,9 @@ from contracts.research import ResearchPacket
 from contracts.subject import SubjectCreate
 
 __all__ = [
+    "ContentItemEnvelope",
+    "ContentPackageItem",
+    "ContentPackage",
     "SubjectCreate",
     "ResearchPacket",
     "InstagramCarouselContent",

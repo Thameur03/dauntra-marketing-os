@@ -1,28 +1,65 @@
 schema_version: 1
 
-system:
-  spec_version: "2.0"
-  foundation_version: "1.0"
+spec:
+  version: "2.0"
+
+foundation:
+  version: "1.0"
+
+contracts:
+  version: "1.0"
+
+database:
+  version: "1.0"
+
+content_brain:
+  version: "3A"
+
+providers:
+  llm:
+    active: "gemini"
+    model_source: "GEMINI_MODEL environment variable"
+
+  research:
+    primary: "pubmed"
 
 prompts:
-  research: "not_created"
-  angle: "not_created"
-  instagram: "not_created"
-  tiktok: "not_created"
-  x: "not_created"
-  facebook: "not_created"
-  reddit: "not_created"
-  qa_brand: "not_created"
-  qa_claims: "not_created"
+  research:
+    version: "research_v1"
+
+  instagram:
+    version: "not_created"
+
+  tiktok:
+    version: "not_created"
+
+  x:
+    version: "not_created"
+
+  facebook:
+    version: "not_created"
+
+  reddit:
+    version: "not_created"
 
 templates:
-  C01: "not_created"
-  C02: "not_created"
-  C03: "not_created"
-  C04: "not_created"
-  V01: "not_created"
+  C01:
+    version: "not_created"
 
-models:
-  research: "not_selected"
-  writing: "not_selected"
-  qa: "not_selected"
+  C02:
+    version: "not_created"
+
+  C03:
+    version: "not_created"
+
+  C04:
+    version: "not_created"
+
+  V01:
+    version: "not_created"
+
+
+runtime:
+  gemini_calls_per_research_subject: 1
+  pubmed_query_generation: deterministic
+  google_search_grounding: false

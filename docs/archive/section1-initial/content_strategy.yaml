@@ -1,0 +1,115 @@
+schema_version: 1
+
+v1:
+  market: "GLOBAL"
+  language: "en"
+
+  objective:
+    stage: "prelaunch"
+    primary_conversion: "qualified_waitlist_signup"
+
+qualified_waitlist_signup:
+  working_definition: >
+    A unique, valid waitlist signup that is not identified as an obvious
+    duplicate, test entry, or bot submission.
+
+  note: >
+    This definition can become stricter once the waitlist contains enough
+    data to justify qualification rules.
+
+content_principles:
+  - "Teach something useful."
+  - "Use DAUNTRA naturally rather than forcing product promotion."
+  - "Prefer one strong idea per content item."
+  - "Do not create content simply to satisfy a posting quota."
+  - "Evidence quality matters more than content volume."
+  - "Platform adaptation should preserve the idea, not copy the same wording."
+
+content_families:
+
+  C01:
+    name: "Contrarian / Myth Busting"
+    goal: "Correct a common misunderstanding using clear reasoning."
+    product_required: false
+
+  C02:
+    name: "Evidence / Education"
+    goal: "Explain useful training or nutrition concepts clearly."
+    product_required: false
+
+  C03:
+    name: "Nutrition"
+    goal: "Create useful nutrition education and practical explanations."
+    product_required: false
+    health_review: true
+
+  C04:
+    name: "DAUNTRA Product"
+    goal: "Explain a real DAUNTRA capability or product benefit."
+    product_required: true
+    capability_manifest_required: true
+
+content_funnel:
+
+  awareness:
+    purpose: "Earn attention by being useful or interesting."
+    typical_families:
+      - "C01"
+      - "C02"
+      - "C03"
+
+  consideration:
+    purpose: "Connect the problem with how DAUNTRA approaches it."
+
+  conversion:
+    purpose: "Invite interested people to join the waitlist."
+    default_cta: "Join the DAUNTRA waitlist."
+
+cta_policy:
+  default: "Join the DAUNTRA waitlist."
+
+  alternatives:
+    - "Learn more about DAUNTRA."
+    - "Follow DAUNTRA for more."
+    - "Save this for later."
+
+  rules:
+    - "Do not force a waitlist CTA into every educational post."
+    - "Do not use fake urgency."
+    - "Do not claim limited availability unless genuinely true."
+
+research_policy:
+  fitness_and_nutrition:
+    evidence_required: true
+    human_review_for_specific_claims: true
+
+  product_content:
+    capability_manifest_required: true
+
+decision_policy:
+  principle: >
+    Do not declare content a winner from tiny samples.
+
+  possible_results:
+    - "DOUBLE_DOWN"
+    - "KEEP_TESTING"
+    - "PAUSE"
+    - "INSUFFICIENT_DATA"
+
+  default_when_uncertain: "INSUFFICIENT_DATA"
+
+v1_success_metric:
+  primary: "qualified_waitlist_signups"
+  normalized_metric: "qualified_signups_per_1000_impressions"
+
+secondary_metrics:
+  - "clicks"
+  - "shares"
+  - "saves"
+  - "comments"
+  - "watch_time"
+  - "views"
+
+note: >
+  Exact metrics depend on what each platform exposes.
+  The database will preserve raw platform metric payloads later.

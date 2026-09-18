@@ -1,0 +1,625 @@
+schema_version: 2
+
+product:
+  name: "DAUNTRA"
+
+audit_source:
+  date: "2026-09-18"
+  repository: "Thameur03/forgefit-front"
+  commit: "a483f58b4ccb441a723f1df7258cbd5b05c6676d"
+
+rules:
+  default_if_unknown: "BLOCK"
+  require_explicit_allow: true
+
+  instruction: >
+    Marketing may claim a capability only when marketing_allowed=true.
+    Planned, partial, backend-only, UI-only, unavailable, and unknown
+    capabilities are blocked unless this manifest explicitly allows a
+    carefully limited claim.
+
+safe_general_claims:
+  - "DAUNTRA is a fitness and nutrition tracking app."
+  - "DAUNTRA combines resistance-training tracking and nutrition tracking."
+  - "DAUNTRA is designed for people who want to understand the work they log."
+
+features:
+
+  workout_logging:
+    display_name: "Live Workout Logging"
+    status: "available"
+    marketing_allowed: true
+
+    description: >
+      Users can log resistance workouts live using exercises, sets,
+      repetitions, and load.
+
+    allowed_claims:
+      - "Log sets, reps, and weights during your workout."
+      - "Active workout drafts are stored locally so interrupted sessions can be recovered."
+
+    limitations:
+      - "Load is stored in kilograms."
+      - "No running distance, GPS pace, swimming, or cardio split tracking."
+      - "No RPE, RIR, tempo, warm-up-set type, drop-set type, or superset type."
+
+    prohibited_claims:
+      - "Tracks cardio distance."
+      - "Tracks GPS routes."
+      - "Tracks RPE or RIR."
+      - "Tracks tempo."
+      - "Tracks supersets and drop sets as dedicated set types."
+
+
+  exercise_library:
+    display_name: "Exercise Library"
+    status: "available"
+    marketing_allowed: true
+
+    description: >
+      Searchable resistance-exercise catalog with animated demonstrations,
+      equipment information, muscle targeting, and exercise instructions.
+
+    allowed_claims:
+      - "Search an exercise catalog with animated movement demonstrations."
+      - "See target muscles, required equipment, and exercise instructions."
+
+    limitations:
+      - "Exercise media is primarily animated GIF content."
+      - "Catalog data is based on ExerciseDB."
+
+    prohibited_claims:
+      - "DAUNTRA produces proprietary trainer-filmed exercise videos."
+      - "DAUNTRA provides real-time camera-based form analysis."
+
+
+  custom_exercise_names:
+    display_name: "Manual Exercise Names"
+    status: "partial"
+    marketing_allowed: true
+
+    description: >
+      Users may type an exercise name manually while creating or editing
+      a workout.
+
+    allowed_claims:
+      - "Add an exercise manually when it is not in the catalog."
+
+    limitations:
+      - "Manual exercise names are not persisted as a reusable custom exercise library."
+      - "Users cannot assign custom muscle mappings or exercise media."
+
+    prohibited_claims:
+      - "Build a reusable custom exercise database."
+      - "Create fully customized exercises with muscle mapping and media."
+
+
+  previous_workout_performance:
+    display_name: "Previous Performance"
+    status: "available"
+    marketing_allowed: true
+
+    description: >
+      DAUNTRA can display the weight and repetitions logged previously for
+      an exercise while the user is training.
+
+    allowed_claims:
+      - "See your previous weight and reps while logging a workout."
+
+    prohibited_claims:
+      - "DAUNTRA predicts your next weight."
+      - "DAUNTRA automatically prescribes progressive overload."
+
+
+  rest_timer:
+    display_name: "Workout Rest Timer"
+    status: "available"
+    marketing_allowed: true
+
+    description: >
+      In-session countdown timer with pause/resume controls, adjustment,
+      haptic feedback, and local completion notification.
+
+    allowed_claims:
+      - "Use a built-in rest timer between sets."
+      - "Receive a local notification when your rest period finishes."
+
+    prohibited_claims:
+      - "Uses heart rate to calculate recovery."
+      - "Predicts when your body has recovered."
+
+
+  personal_records:
+    display_name: "PR Detection and Estimated 1RM"
+    status: "available"
+    marketing_allowed: true
+
+    description: >
+      DAUNTRA compares completed resistance-training performance against
+      historical workouts and calculates estimated one-repetition maximum
+      using the Epley formula.
+
+    allowed_claims:
+      - "Automatically detect newly broken personal records."
+      - "Calculate estimated 1-rep max using the Epley formula."
+
+    limitations:
+      - "Estimated 1RM is a mathematical estimate."
+      - "First-time exercises are not treated as broken historical records."
+
+    prohibited_claims:
+      - "Measures your true physiological 1RM."
+      - "Guarantees your maximum lifting ability."
+
+
+  workout_programs:
+    display_name: "Workout Programs"
+    status: "available"
+    marketing_allowed: true
+
+    description: >
+      Users can create custom multi-week training programs or use
+      pre-built program templates.
+
+    allowed_claims:
+      - "Create custom multi-week workout programs."
+      - "Use structured workout program templates."
+
+    limitations:
+      - "Programs are manually created or selected from existing templates."
+
+    prohibited_claims:
+      - "AI automatically creates your workout plan."
+      - "DAUNTRA automatically periodizes your training."
+      - "Programs adapt themselves automatically."
+
+
+  workout_calendar:
+    display_name: "Workout Calendar"
+    status: "available"
+    marketing_allowed: true
+
+    description: >
+      Program workout days can be scheduled onto calendar dates.
+
+    allowed_claims:
+      - "Schedule workouts on your training calendar."
+
+    prohibited_claims:
+      - "Automatically changes your schedule based on recovery."
+
+
+  workout_volume_analytics:
+    display_name: "Workout Volume Analytics"
+    status: "available"
+    marketing_allowed: true
+
+    description: >
+      DAUNTRA calculates resistance-training volume, completed sets,
+      sessions per week, and weekly volume trends.
+
+    allowed_claims:
+      - "Track weekly training volume."
+      - "See completed sets and training frequency over time."
+
+    prohibited_claims:
+      - "Provides laboratory-grade physiological analysis."
+
+
+  muscle_analytics:
+    display_name: "Interactive Muscle Map"
+    status: "available"
+    marketing_allowed: true
+
+    description: >
+      Interactive front-and-back anatomical map highlighting muscle groups
+      based on logged training volume.
+
+    allowed_claims:
+      - "Visualize your training distribution on an interactive muscle map."
+      - "See which muscle groups received more or less training volume."
+
+    limitations:
+      - "This is a software visualization based on logged exercise sets."
+      - "It is not medical imaging."
+      - "Premium gating may apply depending on platform/release state."
+
+    prohibited_claims:
+      - "Measures actual muscle activation."
+      - "Scans muscle tissue."
+      - "Measures muscle growth."
+      - "Uses MRI-like analysis."
+
+
+  nutrition_logging:
+    display_name: "Food Diary"
+    status: "available"
+    marketing_allowed: true
+
+    description: >
+      Daily food diary with breakfast, lunch, dinner, snacks, and custom
+      meal slots.
+
+    allowed_claims:
+      - "Log meals throughout the day."
+      - "Organize food entries across meal slots."
+
+    prohibited_claims:
+      - "Voice-controlled food logging."
+      - "Automatic meal recognition from photos."
+
+
+  food_search:
+    display_name: "Food Search"
+    status: "available"
+    marketing_allowed: true
+
+    description: >
+      Food search backed by USDA FoodData Central through the DAUNTRA backend.
+
+    allowed_claims:
+      - "Search foods and ingredients using USDA FoodData Central data."
+
+    limitations:
+      - "Requires internet connectivity."
+      - "Coverage depends on available database records."
+
+    prohibited_claims:
+      - "Works completely offline."
+      - "Contains every restaurant meal in the world."
+
+
+  barcode_scanner:
+    display_name: "Food Barcode Scanner"
+    status: "available"
+    marketing_allowed: true
+
+    description: >
+      Uses the phone camera to scan supported packaged-food barcodes and
+      query Open Food Facts.
+
+    allowed_claims:
+      - "Scan packaged food barcodes to speed up food logging."
+
+    limitations:
+      - "Requires camera permission."
+      - "Product coverage depends on Open Food Facts."
+
+    prohibited_claims:
+      - "Recognizes meals from photos."
+      - "Identifies arbitrary restaurant meals with the camera."
+
+
+  macro_tracking:
+    display_name: "Calories and Macros"
+    status: "available"
+    marketing_allowed: true
+
+    description: >
+      Tracks calories, protein, carbohydrates, and fat against
+      user-defined daily targets.
+
+    allowed_claims:
+      - "Track calories, protein, carbohydrates, and fat."
+      - "Set your own daily calorie and macro targets."
+
+    limitations:
+      - "Targets are user-defined and static."
+      - "Targets do not automatically adapt to workout expenditure."
+
+    prohibited_claims:
+      - "Automatically adjusts calories every day."
+      - "Automatically changes macros based on metabolism."
+
+
+  micronutrient_tracking:
+    display_name: "Micronutrient Tracking"
+    status: "available"
+    marketing_allowed: true
+
+    description: >
+      Tracks supported vitamins and minerals from USDA-linked foods and
+      compares intake with configured daily recommended targets.
+
+    tracked_nutrients:
+      minerals:
+        - "Calcium"
+        - "Iron"
+        - "Magnesium"
+        - "Phosphorus"
+        - "Potassium"
+        - "Sodium"
+        - "Zinc"
+        - "Copper"
+
+      fat_soluble_vitamins:
+        - "Vitamin A"
+        - "Vitamin E"
+        - "Vitamin D"
+        - "Vitamin K"
+
+      water_soluble_vitamins:
+        - "Vitamin C"
+        - "Thiamin / Vitamin B1"
+        - "Riboflavin / Vitamin B2"
+        - "Niacin / Vitamin B3"
+        - "Vitamin B6"
+        - "Folate"
+        - "Vitamin B12"
+
+      other:
+        - "Dietary Fiber"
+
+    allowed_claims:
+      - "Track up to 19 supported micronutrient and fiber metrics from USDA-linked foods."
+      - "Compare supported nutrient intake against daily recommended targets."
+
+    limitations:
+      - "Requires foods with compatible USDA nutrient information."
+      - "Manual foods without USDA nutrient data may not provide micronutrient values."
+      - "Water/hydration tracking is not implemented."
+      - "Sugar tracking is not implemented as a dedicated supported dashboard metric."
+
+    prohibited_claims:
+      - "Tracks hydration."
+      - "Tracks blood sugar."
+      - "Tracks glucose spikes."
+
+
+  food_favorites:
+    display_name: "Favorite Foods"
+    status: "available"
+    marketing_allowed: true
+
+    description: >
+      Individual food items may be saved as favorites for easier future access.
+
+    allowed_claims:
+      - "Save favorite foods for faster access."
+
+    prohibited_claims:
+      - "Save complete reusable recipes."
+      - "Save reusable multi-food meal templates."
+
+
+  recipes:
+    display_name: "Recipes"
+    status: "absent"
+    marketing_allowed: false
+
+
+  ai_meal_planning:
+    display_name: "AI Meal Planning"
+    status: "absent"
+    marketing_allowed: false
+
+
+  body_weight_history:
+    display_name: "Body Weight History"
+    status: "absent"
+    marketing_allowed: false
+
+    prohibited_claims:
+      - "Track your weight trend over time."
+      - "Track weight-loss progress."
+
+
+  body_composition:
+    display_name: "Body Composition Tracking"
+    status: "absent"
+    marketing_allowed: false
+
+    prohibited_claims:
+      - "Track body fat percentage."
+      - "Track lean mass."
+      - "Track muscle mass."
+
+
+  body_measurements:
+    display_name: "Body Measurements"
+    status: "absent"
+    marketing_allowed: false
+
+
+  progress_photos:
+    display_name: "Progress Photos"
+    status: "absent"
+    marketing_allowed: false
+
+
+  bmi:
+    display_name: "BMI"
+    status: "absent"
+    marketing_allowed: false
+
+    note: >
+      Existing onboarding text references BMI, but the audited product
+      does not calculate, store, or display BMI.
+
+    prohibited_claims:
+      - "DAUNTRA calculates BMI."
+
+
+  lab_insights:
+    display_name: "Training and Nutrition Consistency Insights"
+    status: "partial"
+    marketing_allowed: false
+
+    description: >
+      Existing feature compares recent training rhythm and nutrition-log
+      completion against a multi-week personal baseline.
+
+    reason_marketing_blocked: >
+      Backend deployment was not verified as production-ready during the audit,
+      and the current internal name "Lab Insights" creates unnecessary risk
+      of being misunderstood as medical laboratory analysis.
+
+    future_safe_claims_after_verification:
+      - "Compare recent training consistency against your personal baseline."
+      - "See trends in workout frequency and nutrition logging consistency."
+
+    prohibited_claims:
+      - "Analyzes blood tests."
+      - "Analyzes biomarkers."
+      - "Uploads medical lab reports."
+      - "Diagnoses health conditions."
+      - "Provides medical advice."
+      - "AI coach."
+
+
+  ai_coach:
+    display_name: "Conversational AI Coach"
+    status: "absent"
+    marketing_allowed: false
+
+    prohibited_claims:
+      - "Chat with an AI coach."
+      - "Get live AI coaching."
+      - "Ask DAUNTRA questions like ChatGPT."
+
+
+  ai_workout_generation:
+    display_name: "AI Workout Generation"
+    status: "absent"
+    marketing_allowed: false
+
+
+  adaptive_programming:
+    display_name: "Adaptive Training"
+    status: "absent"
+    marketing_allowed: false
+
+    prohibited_claims:
+      - "Automatically adjusts your training."
+      - "Automatically applies progressive overload."
+      - "Predicts recovery."
+      - "Automatically recommends deloads."
+
+
+  wearable_integration:
+    display_name: "Wearable Integration"
+    status: "absent"
+    marketing_allowed: false
+
+    prohibited_claims:
+      - "Apple Health integration."
+      - "HealthKit integration."
+      - "Apple Watch integration."
+      - "Garmin integration."
+      - "Whoop integration."
+      - "Oura integration."
+      - "Fitbit integration."
+      - "Google Health Connect integration."
+      - "Strava integration."
+
+
+  social_features:
+    display_name: "Community and Social Features"
+    status: "absent"
+    marketing_allowed: false
+
+    prohibited_claims:
+      - "Follow friends."
+      - "Community feed."
+      - "Leaderboards."
+      - "Messaging."
+      - "Challenges."
+
+
+  data_export:
+    display_name: "Data Export"
+    status: "absent"
+    marketing_allowed: false
+
+    prohibited_claims:
+      - "Export workouts to CSV."
+      - "Export nutrition to PDF."
+
+
+  notifications:
+    display_name: "Notifications"
+    status: "partial"
+    marketing_allowed: true
+
+    allowed_claims:
+      - "Receive a local alert when your workout rest timer finishes."
+
+    prohibited_claims:
+      - "Workout reminder notifications."
+      - "Meal reminders."
+      - "Hydration reminders."
+      - "Push coaching notifications."
+
+
+  premium_subscriptions:
+    display_name: "Premium Subscription"
+    status: "partial"
+    marketing_allowed: false
+
+    reason_marketing_blocked: >
+      StoreKit client implementation exists, but production entitlement
+      backend and App Store product readiness were not verified as complete
+      during the audit.
+
+    prohibited_claims:
+      - "Subscribe now."
+      - "Premium is live."
+      - "Purchases are available on all platforms."
+
+
+  free_trial:
+    display_name: "Public Free Trial"
+    status: "absent"
+    marketing_allowed: false
+
+    prohibited_claims:
+      - "7-day free trial."
+
+
+  waitlist_rewards:
+    display_name: "Waitlist Free Premium Rewards"
+    status: "absent"
+    marketing_allowed: false
+
+    prohibited_claims:
+      - "Founding members receive 60 free days."
+      - "Waitlist members receive 30 free days."
+
+
+  android_billing:
+    display_name: "Android Billing"
+    status: "absent"
+    marketing_allowed: false
+
+
+claims_policy:
+
+  medical:
+    allowed: false
+
+  diagnosis:
+    allowed: false
+
+  treatment:
+    allowed: false
+
+  guaranteed_results:
+    allowed: false
+
+  unsupported_statistics:
+    allowed: false
+
+  unsupported_comparisons:
+    allowed: false
+
+  competitor_superiority:
+    allowed_without_evidence: false
+
+  testimonials:
+    allowed_without_verified_source: false
+
+  medical_lab_language:
+    allowed: false
+
+  ai_coach_language:
+    allowed: false

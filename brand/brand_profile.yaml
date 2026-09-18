@@ -1,0 +1,137 @@
+schema_version: 2
+
+brand:
+  name: "DAUNTRA"
+  tagline: "THE WORK, UNDERSTOOD."
+  category: "fitness and nutrition tracking app"
+
+  factual_description: >
+    DAUNTRA combines resistance-training tracking, workout analytics,
+    nutrition logging, micronutrient tracking, and training-volume
+    visualization in a single mobile application.
+
+positioning:
+  core_idea: >
+    Help serious gym users understand the training and nutrition data
+    they already log.
+
+  principles:
+    - "Useful before promotional."
+    - "Specific before generic."
+    - "Data-aware before hype."
+    - "Explain the work clearly."
+    - "Never invent capabilities."
+    - "Never imply medical functionality."
+    - "Do not force DAUNTRA into every educational post."
+
+voice:
+  should_be:
+    - "direct"
+    - "disciplined"
+    - "analytical"
+    - "clear"
+    - "calm"
+    - "practical"
+    - "specific"
+    - "evidence-aware"
+
+  should_not_be:
+    - "bro-science"
+    - "fake motivational"
+    - "spammy"
+    - "hyperactive"
+    - "medicalized"
+    - "corporate"
+    - "vague"
+    - "sensational"
+    - "fake revolutionary"
+
+existing_product_language:
+  tagline: "THE WORK, UNDERSTOOD."
+  subtitle_draft: "Training, Nutrition, Insight"
+
+  phrases:
+    - "Deeper analysis of the work you already log."
+    - "Track workouts, monitor nutrition, and achieve your goals with DAUNTRA."
+
+product_copy_warning:
+  existing_overstatement:
+    text: "This helps us personalize your fitness plan and calculate your BMI accurately."
+    marketing_status: "DO_NOT_REUSE"
+    reason: >
+      The audited application does not calculate BMI and does not
+      automatically generate personalized fitness plans.
+
+writing_rules:
+  prefer:
+    - "plain English"
+    - "specific numbers when verified"
+    - "concrete product behavior"
+    - "short hooks"
+    - "useful educational explanations"
+    - "natural product mentions"
+    - "one strong idea per content item"
+
+  avoid:
+    - "miracle claims"
+    - "guaranteed outcomes"
+    - "fake scarcity"
+    - "fake statistics"
+    - "medical claims"
+    - "unsupported AI language"
+    - "wearable claims"
+    - "body-transformation promises"
+    - "generic motivational filler"
+
+product_mention_rule: >
+  Educational content must remain useful even when DAUNTRA is not mentioned.
+  Product mentions should appear only when a verified DAUNTRA capability
+  naturally supports the topic.
+
+health_content_rule: >
+  Specific fitness, nutrition, supplement, physiological, or health claims
+  require supporting evidence and human review before publishing.
+
+visual_identity:
+
+  official_brand_colors:
+    obsidian: "#0A0A0A"
+    graphite: "#6B717C"
+    mineral_white: "#F2F2F2"
+    oxide_orange: "#FF4A18"
+    performance_green: "#22C55E"
+
+  preferred_marketing_palette:
+    background_primary: "#0A0A0A"
+    background_secondary: "#0F0F10"
+    surface_primary: "#141416"
+    accent_primary: "#FF4A18"
+    text_primary: "#F2F2F2"
+
+  typography:
+    strategy: "system-like clean sans serif"
+    characteristics:
+      - "bold performance numbers"
+      - "high-contrast headings"
+      - "minimal decorative typography"
+
+  design_character:
+    - "dark"
+    - "minimal"
+    - "disciplined"
+    - "high contrast"
+    - "performance-oriented"
+    - "orange accent used intentionally"
+
+  logo_asset_source:
+    repository_path: "assets/branding/dauntra/launcher/dauntra_app_icon_master.png"
+
+global_rules:
+  - "Do not claim DAUNTRA is published until publication is verified."
+  - "Do not claim Premium subscriptions are live until verified."
+  - "Do not advertise a free trial."
+  - "Do not advertise 30-day or 60-day waitlist rewards."
+  - "Do not describe DAUNTRA as an AI coach."
+  - "Do not describe DAUNTRA as a medical or biomarker application."
+  - "Do not mention wearable synchronization."
+  - "Do not use VPN or location spoofing."

@@ -1,0 +1,272 @@
+schema_version: 2
+
+v1:
+  market: "GLOBAL"
+  language: "en"
+  lifecycle_stage: "prelaunch"
+
+primary_business_goal:
+  event: "qualified_waitlist_signup"
+
+qualified_waitlist_signup:
+  working_definition: >
+    A unique valid waitlist email that is not identified as a duplicate,
+    obvious test entry, or bot submission.
+
+  note: >
+    Do not promise free Premium time or trial benefits because no audited
+    implementation currently connects those benefits to DAUNTRA accounts.
+
+core_marketing_thesis: >
+  DAUNTRA should earn attention by helping gym users understand training
+  and nutrition better, then demonstrate how the product makes those
+  same areas easier to track and understand.
+
+content_pillars:
+
+  training_education:
+    priority: "HIGH"
+
+    topics:
+      - "training volume"
+      - "sets and reps"
+      - "exercise selection"
+      - "progressive overload concepts"
+      - "rest intervals"
+      - "strength progression"
+      - "estimated 1RM"
+      - "training consistency"
+
+    product_connections:
+      - "workout_logging"
+      - "rest_timer"
+      - "personal_records"
+      - "workout_volume_analytics"
+
+
+  hypertrophy_and_muscle_distribution:
+    priority: "HIGH"
+
+    topics:
+      - "muscle-group training"
+      - "balanced program design"
+      - "weekly set distribution"
+      - "exercise selection"
+      - "training volume"
+
+    product_connections:
+      - "muscle_analytics"
+      - "exercise_library"
+      - "workout_programs"
+
+
+  nutrition_education:
+    priority: "HIGH"
+    sensitive_claim_review: true
+
+    topics:
+      - "calories"
+      - "protein"
+      - "carbohydrates"
+      - "dietary fat"
+      - "fiber"
+      - "micronutrients"
+      - "food logging"
+      - "nutrition consistency"
+
+    product_connections:
+      - "nutrition_logging"
+      - "food_search"
+      - "barcode_scanner"
+      - "macro_tracking"
+      - "micronutrient_tracking"
+
+
+  product_workflows:
+    priority: "MEDIUM"
+
+    topics:
+      - "how DAUNTRA logs workouts"
+      - "how PR detection works"
+      - "how the muscle map works"
+      - "how barcode logging works"
+      - "how micronutrient tracking works"
+      - "how workout programs work"
+
+    capability_manifest_required: true
+
+
+content_families:
+
+  C01:
+    name: "Contrarian / Myth Busting"
+
+    purpose: >
+      Challenge an oversimplified gym or nutrition belief with evidence
+      and practical reasoning.
+
+    product_required: false
+
+
+  C02:
+    name: "Evidence / Education"
+
+    purpose: >
+      Explain a useful training or nutrition concept clearly.
+
+    product_required: false
+
+
+  C03:
+    name: "Nutrition"
+
+    purpose: >
+      Explain nutrition topics with practical context.
+
+    product_required: false
+    sensitive_claim_review: true
+
+
+  C04:
+    name: "DAUNTRA Product"
+
+    purpose: >
+      Explain a verified DAUNTRA capability and why it is useful.
+
+    product_required: true
+    capability_manifest_required: true
+
+
+product_content_priority:
+
+  tier_1:
+    - "workout_logging"
+    - "personal_records"
+    - "exercise_library"
+    - "workout_programs"
+    - "workout_calendar"
+    - "muscle_analytics"
+    - "nutrition_logging"
+    - "food_search"
+    - "barcode_scanner"
+    - "macro_tracking"
+    - "micronutrient_tracking"
+
+  tier_2:
+    - "previous_workout_performance"
+    - "rest_timer"
+    - "workout_volume_analytics"
+    - "food_favorites"
+
+  blocked:
+    - "lab_insights"
+    - "ai_coach"
+    - "ai_workout_generation"
+    - "adaptive_programming"
+    - "wearable_integration"
+    - "body_weight_history"
+    - "body_composition"
+    - "premium_subscriptions"
+    - "free_trial"
+    - "waitlist_rewards"
+
+
+forbidden_marketing_angles:
+  - "blood test analysis"
+  - "biomarker tracking"
+  - "medical diagnosis"
+  - "AI coach"
+  - "AI workout generation"
+  - "automatic adaptive programming"
+  - "wearable synchronization"
+  - "Apple Watch integration"
+  - "weight-loss progress tracking"
+  - "body-fat tracking"
+  - "progress-photo tracking"
+  - "social fitness community"
+  - "7-day free trial"
+  - "30-day waitlist reward"
+  - "60-day founding-member reward"
+
+
+content_funnel:
+
+  awareness:
+    purpose: >
+      Earn attention with useful gym, training, and nutrition information.
+
+  consideration:
+    purpose: >
+      Demonstrate how structured tracking and analysis can reduce uncertainty.
+
+  conversion:
+    purpose: >
+      Invite interested users to join the DAUNTRA waitlist.
+
+
+cta_policy:
+
+  primary:
+    - "Join the DAUNTRA waitlist."
+
+  secondary:
+    - "Learn more about DAUNTRA."
+    - "Follow DAUNTRA for more."
+    - "Save this for later."
+
+  rules:
+    - "Do not force a waitlist CTA into every post."
+    - "Do not use fake urgency."
+    - "Do not advertise benefits that do not exist."
+    - "Do not advertise subscription pricing before store configuration is verified."
+
+
+research_policy:
+
+  general_training:
+    evidence_required_for_specific_claims: true
+
+  nutrition:
+    evidence_required: true
+    human_review_for_specific_claims: true
+
+  supplements:
+    evidence_required: true
+    human_review_required: true
+
+  product:
+    capability_manifest_required: true
+
+
+generation_policy:
+
+  core_rule: >
+    Build one factual research/evidence packet first, then create
+    platform-native content independently from that packet.
+
+  do_not:
+    - "Write one Instagram caption and mechanically rewrite it for every platform."
+    - "Invent DAUNTRA capabilities."
+    - "Force product promotion into educational content."
+
+
+analytics_policy:
+
+  primary_prelaunch_metric:
+    name: "qualified_signups_per_1000_impressions"
+
+  secondary_metrics:
+    - "clicks"
+    - "shares"
+    - "saves"
+    - "comments"
+    - "watch_time"
+    - "views"
+
+  decision_states:
+    - "DOUBLE_DOWN"
+    - "KEEP_TESTING"
+    - "PAUSE"
+    - "INSUFFICIENT_DATA"
+
+  default_when_uncertain: "INSUFFICIENT_DATA"

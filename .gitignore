@@ -1,0 +1,48 @@
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Generated assets
+output/
+renders/
+tmp/
+*.mp4
+*.webm
+
+# Local databases / logs
+*.db
+*.sqlite
+*.log
+
+# Secrets / credentials
+credentials/
+secrets/
+*.pem
+*.key
+service-account*.json
+
+# n8n exports containing credentials must never live here
+n8n_credentials*
+
+# Build output
+dist/
+build/

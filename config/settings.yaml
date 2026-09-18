@@ -1,0 +1,51 @@
+schema_version: 2
+
+application:
+  name: "DAUNTRA Marketing OS"
+  environment: "development"
+
+product:
+  state: "PRE_LAUNCH"
+
+market:
+  target: "GLOBAL"
+  language: "en"
+
+time:
+  storage_timezone: "UTC"
+  schedule_by_target_market: true
+
+publishing:
+  enabled: false
+  kill_switch: true
+
+  note: >
+    Publishing remains disabled until the publishing subsystem is
+    intentionally implemented and tested.
+
+generation:
+  capability_policy: "ALLOWLIST_ONLY"
+  unknown_capability_behavior: "BLOCK"
+
+human_review:
+
+  required_for:
+    - "specific health claims"
+    - "specific nutrition claims"
+    - "supplement claims"
+    - "physiological claims"
+    - "claims with uncertain evidence"
+
+system_behavior:
+
+  if_capability_unknown: "BLOCK"
+
+  if_capability_marketing_allowed_false: "BLOCK"
+
+  if_sensitive_claim_has_no_evidence: "BLOCK"
+
+  if_publication_status_unknown: "UNKNOWN"
+
+  if_sample_size_insufficient: "INSUFFICIENT_DATA"
+
+  if_external_platform_requirement_is_unclear: "STOP_AND_REVIEW"

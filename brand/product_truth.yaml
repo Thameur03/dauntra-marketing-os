@@ -1,0 +1,58 @@
+schema_version: 1
+
+audit:
+  date: "2026-09-18"
+  repository: "Thameur03/forgefit-front"
+  audited_workspace: "/home/thameur/forgefit-ios"
+  branch: "feature/ios-freemium-launch"
+  commit: "a483f58b4ccb441a723f1df7258cbd5b05c6676d"
+  scope: "read-only product codebase audit"
+
+product:
+  name: "DAUNTRA"
+  tagline: "THE WORK, UNDERSTOOD."
+  category: "fitness and nutrition tracking application"
+
+  current_release_state:
+    status: "PRE_LAUNCH"
+    app_store_published: false
+    testflight_published: false
+    google_play_published: false
+
+  supported_product_focus:
+    - "resistance training"
+    - "gym workout tracking"
+    - "nutrition tracking"
+    - "training analytics"
+    - "micronutrient tracking"
+
+  weak_or_unsupported_product_focus:
+    - "endurance sports"
+    - "running"
+    - "cycling"
+    - "wearable tracking"
+    - "body transformation tracking"
+    - "medical analysis"
+
+technology_summary:
+  client:
+    framework: "Flutter"
+    language: "Dart"
+
+  backend:
+    framework: "FastAPI"
+    language: "Python"
+
+  authentication:
+    type: "custom email/password JWT"
+
+  analytics:
+    - "custom backend analytics"
+    - "PostHog"
+    - "Sentry"
+
+marketing_truth_rule: >
+  Marketing must describe only capabilities marked marketing_allowed=true
+  in capability_manifest.yaml.
+
+unknown_capability_rule: "BLOCK"

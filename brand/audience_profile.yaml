@@ -1,0 +1,123 @@
+schema_version: 2
+
+primary_market:
+  code: "GLOBAL"
+  language: "en"
+  strategy: "Global English first"
+
+v1_positioning_rule: >
+  Start with the audience most strongly supported by the existing product.
+  Do not broaden positioning simply to reach more people.
+
+primary_audience:
+
+  id: "DATA_ORIENTED_RESISTANCE_TRAINEES"
+
+  description: >
+    Gym and resistance-training users who want structured workout logging,
+    nutrition tracking, and useful performance data in one application.
+
+  evidence_strength: "HIGH"
+
+  likely_behaviors:
+    - "regular gym training"
+    - "tracking sets and repetitions"
+    - "tracking load"
+    - "monitoring progress over time"
+    - "tracking calories or macros"
+    - "interested in measurable training progress"
+
+  relevant_dauntra_capabilities:
+    - "workout_logging"
+    - "previous_workout_performance"
+    - "personal_records"
+    - "workout_programs"
+    - "workout_calendar"
+    - "muscle_analytics"
+    - "nutrition_logging"
+    - "macro_tracking"
+    - "micronutrient_tracking"
+
+
+secondary_audiences:
+
+  - id: "HYPERTROPHY_FOCUSED_TRAINEES"
+
+    evidence_strength: "MEDIUM"
+
+    description: >
+      Resistance trainees interested in muscle-group distribution,
+      exercise selection, training volume, and nutrition.
+
+    relevant_capabilities:
+      - "muscle_analytics"
+      - "workout_volume_analytics"
+      - "exercise_library"
+      - "macro_tracking"
+
+
+  - id: "NUTRITION_DATA_TRACKERS"
+
+    evidence_strength: "MEDIUM"
+
+    description: >
+      Users interested in calories, macros, food logging, barcode scanning,
+      and deeper micronutrient information.
+
+    relevant_capabilities:
+      - "nutrition_logging"
+      - "food_search"
+      - "barcode_scanner"
+      - "macro_tracking"
+      - "micronutrient_tracking"
+
+
+poor_fit_audiences:
+
+  - id: "ENDURANCE_ATHLETES"
+
+    reason: >
+      DAUNTRA currently lacks GPS, distance, pace, cardio-session,
+      heart-rate, and wearable tracking.
+
+  - id: "WEARABLE_FIRST_USERS"
+
+    reason: >
+      DAUNTRA has no HealthKit, Apple Watch, Garmin, Whoop, Oura,
+      Fitbit, or comparable integration.
+
+  - id: "BODY_TRANSFORMATION_TRACKERS"
+
+    reason: >
+      DAUNTRA currently lacks historical body-weight tracking,
+      body measurements, body-fat tracking, and progress photos.
+
+  - id: "MEDICAL_HEALTH_TRACKERS"
+
+    reason: >
+      DAUNTRA is not a medical app and does not process clinical
+      laboratory or biomarker data.
+
+
+anti_assumptions:
+  - "Do not assume a specific gender."
+  - "Do not assume a specific age."
+  - "Do not assume all users are bodybuilders."
+  - "Do not assume all users want weight loss."
+  - "Do not assume all users want muscle gain."
+  - "Do not assume DAUNTRA supports endurance training."
+  - "Do not assume DAUNTRA supports wearables."
+
+future_localization:
+  enabled: false
+
+  candidates:
+    - code: "GCC_EN"
+      language: "en"
+
+    - code: "GCC_AR"
+      language: "ar"
+
+  rule: >
+    Localization begins only after GLOBAL_EN generation, rendering,
+    publishing, and attribution are reliable.

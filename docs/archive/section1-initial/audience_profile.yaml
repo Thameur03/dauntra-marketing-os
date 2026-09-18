@@ -1,0 +1,86 @@
+schema_version: 1
+
+primary_market:
+  code: "GLOBAL"
+  language: "en"
+  strategy: "Global English first"
+
+principle: >
+  Do not over-segment V1. Start with a broad but relevant audience,
+  collect actual performance data, then specialize.
+
+core_audience:
+  description: >
+    English-speaking people interested in understanding and improving
+    their training and nutrition through better tracking and information.
+
+audience_hypotheses:
+
+  - id: "TRAINING_TRACKERS"
+    validated: false
+    description: >
+      People who train regularly and want a clearer understanding of
+      workouts, progression, recovery, and performance.
+
+    likely_interests:
+      - "strength training"
+      - "gym"
+      - "bodybuilding"
+      - "fitness tracking"
+      - "progressive overload"
+
+    likely_problems:
+      - "information spread across multiple places"
+      - "difficulty understanding whether progress is actually occurring"
+      - "inconsistent tracking"
+
+  - id: "NUTRITION_TRACKERS"
+    validated: false
+    description: >
+      People who want a clearer picture of their diet rather than only
+      thinking about food in vague terms.
+
+    likely_interests:
+      - "calories"
+      - "macronutrients"
+      - "protein"
+      - "nutrition"
+      - "meal tracking"
+
+    likely_problems:
+      - "inconsistent food tracking"
+      - "confusing nutrition information"
+      - "difficulty connecting nutrition to goals"
+
+  - id: "DATA_ORIENTED_FITNESS"
+    validated: false
+    description: >
+      People who enjoy using data and tracking to make better fitness decisions.
+
+    likely_interests:
+      - "fitness analytics"
+      - "health data"
+      - "training data"
+      - "nutrition data"
+
+anti_assumptions:
+  - "Do not assume a specific gender."
+  - "Do not assume a specific age unless campaign data supports it."
+  - "Do not assume everyone is a bodybuilder."
+  - "Do not assume everyone wants weight loss."
+  - "Do not assume everyone wants muscle gain."
+  - "Do not assume users are advanced athletes."
+
+future_markets:
+  enabled: false
+
+  candidates:
+    - code: "GCC_EN"
+      language: "en"
+
+    - code: "GCC_AR"
+      language: "ar"
+
+  note: >
+    Localization is intentionally deferred.
+    GLOBAL_EN must work properly before adding another language.

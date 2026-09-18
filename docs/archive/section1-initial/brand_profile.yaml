@@ -1,0 +1,75 @@
+schema_version: 1
+
+brand:
+  name: "DAUNTRA"
+  tagline: "the work, understood"
+  category: "premium fitness and nutrition tracking app"
+
+  description: >
+    DAUNTRA helps people understand and track their training and nutrition.
+    Marketing must communicate clearly, accurately, and without exaggerating
+    what the product currently does.
+
+positioning:
+  principles:
+    - "Useful before promotional."
+    - "Specific before generic."
+    - "Evidence-aware before sensational."
+    - "Explain the why, not only the what."
+    - "Show DAUNTRA only where the product genuinely contributes."
+    - "Never invent product capabilities."
+
+voice:
+  should_be:
+    - "clear"
+    - "direct"
+    - "intelligent"
+    - "calm"
+    - "practical"
+    - "evidence-aware"
+    - "concise"
+    - "confident without exaggeration"
+
+  should_not_be:
+    - "spammy"
+    - "bro-science"
+    - "clickbait-heavy"
+    - "corporate jargon"
+    - "fake motivational"
+    - "overly academic"
+    - "medicalized"
+    - "aggressive"
+
+writing_rules:
+  prefer:
+    - "short sentences"
+    - "concrete examples"
+    - "plain English"
+    - "strong first-line hooks"
+    - "specific useful information"
+    - "natural calls to action"
+
+  avoid:
+    - "guaranteed outcomes"
+    - "miracle claims"
+    - "fear-based health messaging"
+    - "fake scarcity"
+    - "fake statistics"
+    - "unsupported scientific certainty"
+    - "claims that DAUNTRA replaces professional medical advice"
+    - "claims about features not explicitly allowed by capability_manifest.yaml"
+
+product_mention_rule: >
+  DAUNTRA should not be forced into every piece of content.
+  Educational content should be useful even without a product mention.
+  Product references should appear only where they are naturally relevant.
+
+health_content_rule: >
+  Specific fitness, nutrition, health, supplement, recovery, or physiological
+  claims require evidence and may require human review before publication.
+
+global_rules:
+  - "Do not use VPN or location spoofing."
+  - "Do not pretend DAUNTRA has customers, results, studies, or testimonials unless verified."
+  - "Do not invent founders, employees, partnerships, integrations, or awards."
+  - "Do not make diagnosis or treatment claims."

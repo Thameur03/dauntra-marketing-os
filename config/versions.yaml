@@ -1,0 +1,28 @@
+schema_version: 1
+
+system:
+  spec_version: "2.0"
+  foundation_version: "1.0"
+
+prompts:
+  research: "not_created"
+  angle: "not_created"
+  instagram: "not_created"
+  tiktok: "not_created"
+  x: "not_created"
+  facebook: "not_created"
+  reddit: "not_created"
+  qa_brand: "not_created"
+  qa_claims: "not_created"
+
+templates:
+  C01: "not_created"
+  C02: "not_created"
+  C03: "not_created"
+  C04: "not_created"
+  V01: "not_created"
+
+models:
+  research: "not_selected"
+  writing: "not_selected"
+  qa: "not_selected"

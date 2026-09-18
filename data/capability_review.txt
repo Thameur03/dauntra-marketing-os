@@ -1,0 +1,16 @@
+============================================================
+DAUNTRA — PRODUCT CAPABILITY REVIEW
+============================================================
+
+This file describes the REAL current state of DAUNTRA.
+
+Allowed status values:
+
+YES      = feature exists now and works
+PARTIAL  = feature exists but has limitations
+NO       = feature does not exist
+PLANNED  = planned but not available yet
+UNKNOWN  = needs checking
+
+Do not describe future features as current features.
+

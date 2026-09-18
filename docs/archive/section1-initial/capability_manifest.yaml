@@ -1,0 +1,102 @@
+schema_version: 1
+
+product:
+  name: "DAUNTRA"
+
+rules:
+  default_if_unknown: "BLOCK"
+  require_explicit_allow: true
+
+  instruction: >
+    If a capability is not explicitly listed as available and
+    marketing_allowed=true, marketing copy must not claim that capability.
+
+safe_general_claims:
+  - "DAUNTRA is a fitness and nutrition tracking app."
+  - "DAUNTRA is designed to help users understand their training and nutrition."
+
+features:
+
+  workout_tracking:
+    status: "needs_verification"
+    marketing_allowed: false
+    description: "Workout/training tracking functionality."
+    allowed_claims: []
+    prohibited_claims:
+      - "Do not describe exact workout features until verified."
+    founder_action: "Verify exact current workout tracking functionality."
+
+  nutrition_tracking:
+    status: "needs_verification"
+    marketing_allowed: false
+    description: "Nutrition tracking functionality."
+    allowed_claims: []
+    prohibited_claims:
+      - "Do not describe exact nutrition features until verified."
+    founder_action: "Verify exact current nutrition tracking functionality."
+
+  micronutrients:
+    status: "needs_verification"
+    marketing_allowed: false
+    description: "Micronutrient tracking or analysis."
+    allowed_claims: []
+    prohibited_claims:
+      - "Do not claim micronutrient support until verified."
+    founder_action: "Verify whether this is implemented and production-ready."
+
+  lab_insights:
+    status: "needs_verification"
+    marketing_allowed: false
+    description: "Functionality involving laboratory or biomarker information."
+    allowed_claims: []
+    prohibited_claims:
+      - "Do not claim diagnosis."
+      - "Do not claim medical interpretation."
+      - "Do not claim treatment recommendations."
+      - "Do not advertise this feature until exact behavior is documented."
+    founder_action: "Document exact implementation before marketing."
+
+  wearable_integration:
+    status: "unavailable"
+    marketing_allowed: false
+    description: "Connection to wearable devices or wearable platforms."
+    allowed_claims: []
+    prohibited_claims:
+      - "Do not claim wearable integration."
+
+  ai_coaching:
+    status: "needs_verification"
+    marketing_allowed: false
+    description: "Any AI-generated coaching or recommendations."
+    allowed_claims: []
+    prohibited_claims:
+      - "Do not claim AI coaching until exact functionality is verified."
+    founder_action: "Verify whether this exists in the released product."
+
+  progress_analytics:
+    status: "needs_verification"
+    marketing_allowed: false
+    description: "Charts, trends, progress analysis, or historical insights."
+    allowed_claims: []
+    prohibited_claims:
+      - "Do not describe analytics features until verified."
+    founder_action: "Document the exact analytics available in the app."
+
+claims_policy:
+  medical:
+    allowed: false
+
+  guaranteed_results:
+    allowed: false
+
+  unsupported_comparisons:
+    allowed: false
+
+  competitor_superiority:
+    allowed_without_evidence: false
+
+  user_testimonials:
+    allowed_without_verified_source: false
+
+  statistics:
+    allowed_without_source: false

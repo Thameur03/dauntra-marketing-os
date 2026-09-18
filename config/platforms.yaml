@@ -1,0 +1,78 @@
+schema_version: 2
+
+platforms:
+
+  instagram:
+    enabled: true
+    publishing_enabled: false
+
+    planned_formats:
+      carousel:
+        enabled: true
+        width: 1080
+        height: 1350
+        file_type: "jpeg"
+
+      video:
+        enabled: true
+        width: 1080
+        height: 1920
+        file_type: "mp4"
+
+
+  tiktok:
+    enabled: true
+    publishing_enabled: false
+
+    planned_formats:
+      video:
+        enabled: true
+        width: 1080
+        height: 1920
+        file_type: "mp4"
+
+    v1_rule: >
+      Do not build a custom TikTok publishing client.
+      Use a compliant publishing provider later if appropriate;
+      otherwise produce publish-ready assets for manual completion.
+
+
+  x:
+    enabled: true
+    publishing_enabled: false
+
+    planned_formats:
+      text:
+        enabled: true
+
+      thread:
+        enabled: true
+
+
+  facebook:
+    enabled: true
+    publishing_enabled: false
+
+    planned_formats:
+      text:
+        enabled: true
+
+      image:
+        enabled: true
+
+      video:
+        enabled: true
+
+
+  reddit:
+    enabled: true
+    publishing_enabled: false
+    manual_only: true
+
+    planned_formats:
+      discussion:
+        enabled: true
+
+    rule: >
+      Marketing OS generates Reddit drafts only.
+      Founder reviews and posts manually.

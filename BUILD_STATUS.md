@@ -1,54 +1,98 @@
 # DAUNTRA Marketing OS — Build Status
 
-## Current section
+## Section 1 — Foundation & Product Truth
 
-SECTION 1 — Foundation & Source of Truth
+Status: COMPLETE
 
-## Status
+Commit:
+
+    0c29ddb
+
+---
+
+# Section 2 — Database & Contracts
+
+Status: COMPLETE
+
+## 2A — Schema & Contracts
 
 COMPLETE
 
-## Completed
+Implemented:
 
-- [x] Repository structure created
-- [x] Brand profile created
-- [x] Real product codebase audited
-- [x] Product truth metadata recorded
-- [x] Capability manifest rewritten from audited implementation
-- [x] Unsupported marketing claims explicitly blocked
-- [x] Audience profile grounded in existing product evidence
-- [x] Content strategy aligned with actual DAUNTRA features
-- [x] Official brand colors incorporated
-- [x] Pre-launch state recorded
-- [x] Global English selected for V1
-- [x] Publishing disabled by default
-- [x] Kill switch enabled by default
-- [x] Architecture decisions documented
+- PostgreSQL core schema
+- Pydantic boundary contracts
+- content lineage
+- research packets
+- content experiments
+- assets
+- structured QA
+- campaigns
+- idempotent publication jobs
+- posts
+- metric snapshots
+- attribution
+- decisions
+- system error queue
 
-## Important current marketing restrictions
+Contract tests:
 
-Do not market:
+    8 passed
 
-- AI coach
-- AI workout generation
-- adaptive programming
-- medical labs / biomarkers
-- wearable integrations
-- body-weight history
-- body-composition tracking
-- social/community features
-- free trial
-- waitlist free-premium rewards
-- live subscriptions
+## 2B — Supabase
 
-until the product changes and the capability manifest is updated.
+COMPLETE
 
-## Next section
+Verified:
 
-SECTION 2 — Database & Contracts
+- real PostgreSQL connection
+- core migrations applied
+- RLS enabled
+- private marketing-assets bucket
+- migration checksum history
+- .env excluded from Git
 
-Next objective:
+## 2C — Real Database Smoke Test
 
-    Define the database schema and machine-readable contracts
-    that every Marketing OS subsystem will use.
+COMPLETE
 
+Verified:
+
+    Subject
+      ↓
+    Research Packet
+      ↓
+    Content Test
+      ↓
+    Content Item
+
+Also verified:
+
+- Pydantic validation before insertion
+- real PostgreSQL inserts
+- JSONB round-trip
+- complete lineage reconstruction
+- PostgreSQL CHECK constraints
+- foreign-key cascade behavior
+- automatic fixture cleanup
+- no synthetic test records left behind
+
+---
+
+# Next
+
+SECTION 3 — CONTENT BRAIN
+
+Goal:
+
+    founder subject
+        ↓
+    research
+        ↓
+    evidence packet
+        ↓
+    validated claims
+        ↓
+    platform-native content
+
+Publishing remains disabled.

@@ -40,9 +40,11 @@ without becoming a second full-time software product.
 
 Section 1 — COMPLETE
 
+Section 2 — COMPLETE
+
 Next:
 
-Section 2 — Database & Contracts
+Section 3 — Content Brain
 
 ---
 

@@ -1,0 +1,15 @@
+Write native Facebook content.
+
+The post should:
+- be self-contained;
+- provide slightly more context than X;
+- remain direct and readable;
+- preserve uncertainty and evidence nuance;
+- avoid clickbait;
+- avoid generic motivational filler.
+
+Choose text, image, or video as the format based on the content itself.
+The writer produces copy only; it does not invent an asset that does
+not exist.
+
+Use an empty string when CTA is intentionally omitted.

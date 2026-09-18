@@ -1,64 +1,44 @@
 schema_version: 1
-
 spec:
-  version: "2.0"
-
+  version: '2.0'
 foundation:
-  version: "1.0"
-
+  version: '1.0'
 contracts:
-  version: "1.0"
-
+  version: '1.0'
 database:
-  version: "1.0"
-
+  version: '1.0'
 content_brain:
-  version: "3A"
-
+  version: 3B
 providers:
   llm:
-    active: "gemini"
-    model_source: "GEMINI_MODEL environment variable"
-
+    active: gemini
+    model_source: GEMINI_MODEL environment variable
   research:
-    primary: "pubmed"
-
+    primary: pubmed
 prompts:
   research:
-    version: "research_v1"
-
+    version: research_v1
   instagram:
-    version: "not_created"
-
+    version: writer_v2
   tiktok:
-    version: "not_created"
-
+    version: writer_v2
   x:
-    version: "not_created"
-
+    version: writer_v2
   facebook:
-    version: "not_created"
-
+    version: writer_v2
   reddit:
-    version: "not_created"
-
+    version: not_created
 templates:
   C01:
-    version: "not_created"
-
+    version: not_created
   C02:
-    version: "not_created"
-
+    version: not_created
   C03:
-    version: "not_created"
-
+    version: not_created
   C04:
-    version: "not_created"
-
+    version: not_created
   V01:
-    version: "not_created"
-
-
+    version: not_created
 runtime:
   gemini_calls_per_research_subject: 1
   pubmed_query_generation: deterministic

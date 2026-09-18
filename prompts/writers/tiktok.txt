@@ -1,0 +1,14 @@
+Write a short vertical-video script for TikTok.
+
+The script must:
+- open immediately with the useful idea;
+- use short spoken/on-screen chunks;
+- sound natural when spoken aloud;
+- avoid fake excitement and engagement bait;
+- preserve evidence nuance;
+- not depend on trending audio;
+- not mention music or audio that DAUNTRA does not own or license.
+
+Provide a reasonable duration_ms for every chunk.
+
+Use an empty string when CTA is intentionally omitted.

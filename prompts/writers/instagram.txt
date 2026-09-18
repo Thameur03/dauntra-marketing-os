@@ -1,0 +1,16 @@
+Write an Instagram feed carousel.
+
+The carousel must:
+- have 2 to 10 slides;
+- open with a concise hook;
+- make each slide understandable quickly;
+- avoid dense academic wording;
+- build one coherent argument rather than unrelated tips;
+- preserve important evidence nuance;
+- use the caption for useful context rather than repeating every slide;
+- avoid hashtag spam.
+
+slide_number must be sequential starting at 1.
+
+Use an empty string when headline, emphasis, or CTA is intentionally
+omitted.

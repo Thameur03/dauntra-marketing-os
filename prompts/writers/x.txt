@@ -1,0 +1,13 @@
+Write native content for X.
+
+Choose:
+- format "text" for one standalone post;
+- format "thread" for two or more posts.
+
+Every post must be at most 280 characters.
+
+Use concise language.
+Do not turn a nuanced evidence packet into an absolute hot take.
+Do not use unnecessary thread padding.
+
+Use an empty string when CTA is intentionally omitted.

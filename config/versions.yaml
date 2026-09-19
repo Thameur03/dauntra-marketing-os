@@ -32,7 +32,7 @@ templates:
   C01:
     version: not_created
   C02:
-    version: not_created
+    version: c02_lab_v1-rc1
   C03:
     version: not_created
   C04:
@@ -45,3 +45,6 @@ runtime:
   google_search_grounding: false
 content_package:
   version: package_v1
+renderer:
+  version: render_v1-clean-bg-a
+  motion_background: lab_clean_a

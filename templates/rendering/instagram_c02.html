@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+
+    width: 1080px;
+    height: 1350px;
+
+    overflow: hidden;
+
+    background: #0A0A0A;
+
+    font-family:
+        "DejaVu Sans",
+        "Liberation Sans",
+        sans-serif;
+
+    -webkit-font-smoothing: antialiased;
+}
+
+
+#canvas {
+
+    position: relative;
+
+    width: 1080px;
+    height: 1350px;
+
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    padding:
+        66px
+        76px
+        54px
+        76px;
+
+    background:
+        radial-gradient(
+            circle at 90% 5%,
+            rgba(255, 74, 24, 0.10),
+            transparent 28%
+        ),
+        linear-gradient(
+            145deg,
+            #0A0A0A 0%,
+            #0F0F10 100%
+        );
+
+    color: #F2F2F2;
+}
+
+
+#canvas::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    width: 14px;
+    height: 100%;
+
+    background: #FF4A18;
+}
+
+
+.header {
+
+    flex: 0 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 56px;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+.brand {
+
+    font-size: 27px;
+    font-weight: 800;
+
+    letter-spacing: 5px;
+
+    color: #F2F2F2;
+}
+
+
+.category {
+
+    padding:
+        11px
+        17px;
+
+    border:
+        1px solid
+        rgba(242, 242, 242, 0.16);
+
+    border-radius: 999px;
+
+    background:
+        rgba(255, 255, 255, 0.035);
+
+    color: #A9ADB5;
+
+    font-size: 17px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+.accent {
+
+    flex: 0 0 auto;
+
+    width: 68px;
+    height: 7px;
+
+    margin-top: 31px;
+
+    border-radius: 99px;
+
+    background: #FF4A18;
+}
+
+
+#content {
+
+    position: relative;
+
+    z-index: 2;
+
+    flex: 1 1 auto;
+
+    min-height: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    padding:
+        36px
+        0
+        30px
+        0;
+}
+
+
+#headline {
+
+    flex: 0 0 auto;
+
+    max-width: 900px;
+
+    color: #F2F2F2;
+
+    font-size: {{HEADLINE_SIZE}}px;
+    line-height: 1.04;
+
+    font-weight: 800;
+
+    letter-spacing: -2.4px;
+
+    margin-bottom: 36px;
+
+    overflow-wrap: anywhere;
+}
+
+
+#body {
+
+    flex: 0 0 auto;
+
+    max-width: 890px;
+
+    color: #D7D9DD;
+
+    font-size: {{BODY_SIZE}}px;
+    line-height: 1.40;
+
+    font-weight: 400;
+
+    letter-spacing: -0.5px;
+
+    white-space: pre-wrap;
+
+    overflow-wrap: anywhere;
+}
+
+
+#emphasis-wrapper {
+
+    flex: 0 0 auto;
+
+    margin-top: 42px;
+
+    padding:
+        24px
+        28px;
+
+    border-left:
+        6px solid
+        #FF4A18;
+
+    background:
+        rgba(255, 255, 255, 0.035);
+}
+
+
+#emphasis-wrapper.hidden {
+    display: none;
+}
+
+
+#emphasis {
+
+    color: #F2F2F2;
+
+    font-size: {{EMPHASIS_SIZE}}px;
+    line-height: 1.28;
+
+    font-weight: 700;
+
+    overflow-wrap: anywhere;
+}
+
+
+.footer {
+
+    flex: 0 0 auto;
+
+    height: 60px;
+
+    display: flex;
+
+    align-items: flex-end;
+    justify-content: space-between;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+.tagline {
+
+    color: #6B717C;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    letter-spacing: 2.1px;
+}
+
+
+.slide-number {
+
+    display: flex;
+    align-items: baseline;
+
+    gap: 7px;
+
+    color: #F2F2F2;
+}
+
+
+.slide-current {
+
+    color: #FF4A18;
+
+    font-size: 33px;
+    font-weight: 800;
+}
+
+
+.slide-total {
+
+    color: #6B717C;
+
+    font-size: 19px;
+    font-weight: 700;
+}
+
+
+.watermark {
+
+    position: absolute;
+
+    right: 42px;
+    bottom: 108px;
+
+    z-index: 0;
+
+    color:
+        rgba(242, 242, 242, 0.018);
+
+    font-size: 250px;
+    font-weight: 900;
+
+    line-height: 1;
+
+    letter-spacing: -18px;
+
+    user-select: none;
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="canvas">
+
+    <div class="header">
+
+        <div class="brand">
+            DAUNTRA
+        </div>
+
+        <div class="category">
+            EVIDENCE
+        </div>
+
+    </div>
+
+
+    <div class="accent"></div>
+
+
+    <main id="content">
+
+        <div id="headline">
+            {{HEADLINE}}
+        </div>
+
+        <div id="body">{{BODY}}</div>
+
+        <div
+            id="emphasis-wrapper"
+            class="{{EMPHASIS_CLASS}}"
+        >
+
+            <div id="emphasis">
+                {{EMPHASIS}}
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <div class="footer">
+
+        <div class="tagline">
+            THE WORK, UNDERSTOOD.
+        </div>
+
+        <div class="slide-number">
+
+            <span class="slide-current">
+                {{SLIDE}}
+            </span>
+
+            <span class="slide-total">
+                / {{TOTAL}}
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <div class="watermark">
+        D
+    </div>
+
+</div>
+
+</body>
+</html>
